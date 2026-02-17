@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="0" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Circle ring -->
+    <circle cx="100" cy="100" r="78" fill="none" stroke="#1a1a1a" stroke-width="9"/>
+
+    <!-- Cardinal points (N, E, S, W) - long thin needles -->
+    <polygon fill="#1a1a1a" points="100,10 104,65 100,100 96,65"/>
+    <polygon fill="#1a1a1a" points="190,100 135,104 100,100 135,96"/>
+    <polygon fill="#1a1a1a" points="100,190 96,135 100,100 104,135"/>
+    <polygon fill="#1a1a1a" points="10,100 65,96 100,100 65,104"/>
+
+    <!-- Ordinal points (NE, SE, SW, NW) - wider shorter diamonds -->
+    <polygon fill="#1a1a1a" points="148.1,51.9 127.6,88 100,100 112,72.4"/>
+    <polygon fill="#1a1a1a" points="148.1,148.1 112,127.6 100,100 127.6,112"/>
+    <polygon fill="#1a1a1a" points="51.9,148.1 72.4,112 100,100 88,127.6"/>
+    <polygon fill="#1a1a1a" points="51.9,51.9 88,72.4 100,100 72.4,88"/>
+  </g>
+</svg>

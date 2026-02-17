@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Circle ring -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#1a1a1a" stroke-width="10"/>
+
+  <!-- Cardinal star (+) - long thin needles for N, E, S, W -->
+  <polygon fill="#1a1a1a" points="
+    100,8
+    102.83,97.17
+    192,100
+    102.83,102.83
+    100,192
+    97.17,102.83
+    8,100
+    97.17,97.17
+  "/>
+
+  <!-- Ordinal star (×) - wider shorter points for NE, SE, SW, NW -->
+  <polygon fill="#1a1a1a" points="
+    149.5,50.5
+    114,100
+    149.5,149.5
+    100,114
+    50.5,149.5
+    86,100
+    50.5,50.5
+    100,86
+  "/>
+</svg>

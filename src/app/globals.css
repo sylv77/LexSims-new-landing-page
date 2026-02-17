@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary palette — warm, classical, legal */
+  --cream: #F8F6F4;
+  --beige: #F0EBE3;
+  --beige-dark: #E8E2D8;
+  --navy: #2D2D2D;
+  --navy-light: #404040;
+  --navy-tint: #EBEBEB;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7A7A;
+  --border: #D4CFC6;
+  --white: #FFFFFF;
+  --navy-footer: #111113;
+  --navy-footer-dark: #0A0A0C;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-beige-dark: var(--beige-dark);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-navy-tint: var(--navy-tint);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-navy-footer: var(--navy-footer);
+  --color-navy-footer-dark: var(--navy-footer-dark);
+  --font-sans: var(--font-geist);
+  --font-serif: var(--font-newsreader);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text-primary);
+  font-family: var(--font-geist), system-ui, sans-serif;
+}
+
+/* Typography utilities */
+.font-serif {
+  font-family: var(--font-newsreader), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-geist), system-ui, sans-serif;
+}
+
+.font-lexsims {
+  font-family: var(--font-lexsims), system-ui, sans-serif;
+}
+
+/* Logo Style */
+.scxon-logo {
+  font-family: var(--font-geist), system-ui, sans-serif;
+  font-weight: 300;
+}
+
+/* Scroll snap for simulation section */
+.snap-section {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Cookie consent fade-in */
+@keyframes cc-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: cc-fade-in 0.3s ease-out;
+}
